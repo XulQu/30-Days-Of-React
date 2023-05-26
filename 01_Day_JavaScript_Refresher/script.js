@@ -116,3 +116,15 @@ const bleachArr = ['Bankai', 'Ichigo' , 'Kon'];
 
 console.log(Array.isArray(string));
 console.log(Array.isArray(bleachArr));
+
+// Change array to strings
+console.log(bleachArr.toString());
+
+console.log(bleachArr.join('* '))
+
+//Slice method: Slice: To cut out a multiple items in range. It takes two parameters:starting and ending position. It doesn't include the ending position.
+
+const numArr = [0,1,2,3,4,5,6,7,8,9];
+
+console.log(numArr.slice(1,5));
+console.log(numArr.slice(0, numArr.length)); // Copies all the items
