@@ -128,3 +128,6 @@ const numArr = [0,1,2,3,4,5,6,7,8,9];
 
 console.log(numArr.slice(1,5));
 console.log(numArr.slice(0, numArr.length)); // Copies all the items
+
+// Test add comment for push
+console.log('This was a test commit')
