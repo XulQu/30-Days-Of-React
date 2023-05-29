@@ -75,18 +75,18 @@ console.log(twelveEmpty);
 
 // Test fill false
 const bool = Array(10).fill(false);
-console.log(bool);  
+console.log(bool);
 
 // Concat arrays (Adding two arrays together)
 
-const firstArr = [1,2,3,4,5];
-const secondArr = [6,7,8,9,10];
+const firstArr = [1, 2, 3, 4, 5];
+const secondArr = [6, 7, 8, 9, 10];
 
 const listArr = firstArr.concat(secondArr);
 console.log(listArr);
 // Same goes for strings and any data types * except null and others
 
-const checkArr = ['Bleach', 'Naruto' , 'One Piece', 'Soul Eater', 'Deathnote', 'FireForce'];
+const checkArr = ['Bleach', 'Naruto', 'One Piece', 'Soul Eater', 'Deathnote', 'FireForce'];
 
 console.log(checkArr.indexOf("Bleach"));
 console.log(checkArr.indexOf("One Piece"));
@@ -96,7 +96,7 @@ console.log(checkArr.indexOf("FireForce"));
 
 let index = checkArr.indexOf('One Punch Man');
 
-if(index <= -1) {
+if (index <= -1) {
     console.log(`This anime is not on this list`)
 } else {
     console.log(`${checkArr[index]} is on this list at ${index}`);
@@ -112,7 +112,7 @@ console.log(checkArr.includes('Deathnote'));
 console.log(checkArr.includes('GTO'));
 
 const string = 'Bankai';
-const bleachArr = ['Bankai', 'Ichigo' , 'Kon'];
+const bleachArr = ['Bankai', 'Ichigo', 'Kon'];
 
 console.log(Array.isArray(string));
 console.log(Array.isArray(bleachArr));
@@ -124,10 +124,71 @@ console.log(bleachArr.join('* '))
 
 //Slice method: Slice: To cut out a multiple items in range. It takes two parameters:starting and ending position. It doesn't include the ending position.
 
-const numArr = [0,1,2,3,4,5,6,7,8,9];
+const numArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-console.log(numArr.slice(1,5));
+console.log(numArr.slice(1, 5));
 console.log(numArr.slice(0, numArr.length)); // Copies all the items
 
-// Test add comment for push
-console.log('This was a test commit')
+// Splice method : at starting posision, number of times to be removed and numberof items to be added
+
+// Removes all items
+console.log(numArr.splice());
+
+// removes the first item
+console.log(numArr.splice(0, 1));
+
+// Removes 4 itesm and adds 4 items
+console.log(numArr.splice(4, 4, 7, 8, 9))
+
+//
+
+
+// Push adds items to the end
+
+const wordArr = ['Frodo', 'Legolas', 'Soul-kun', 'Shinigami-sama'];
+wordArr.push('Wamiq', 'Houlbrak');
+
+console.log(wordArr);
+
+// Pop removes end item i.e Houlbrak
+
+wordArr.pop();
+console.log(wordArr);
+
+// and then pop x2 will remove wamiq
+
+wordArr.pop();
+console.log(wordArr);
+
+// Shift removes an items from the start of the array, index 0, i.e Frodo
+
+wordArr.shift();
+console.log(wordArr);
+
+// Unshift like push , adds an item, but the the start of the array
+
+wordArr.unshift('Galadriel');
+console.log(wordArr);
+
+
+// Reverse. Reverses order of array
+const order = ['a', 'b', 'c', 'd', 'e', 'f'];
+console.log(order);
+
+order.reverse();
+
+console.log(order);
+
+const alpha = ['Bastet', 'Chronos','Abraxus', 'a', 'b', 'c'];
+console.log(alpha);
+alpha.sort();
+
+console.log(alpha);
+
+
+
+
+
+
+
+
