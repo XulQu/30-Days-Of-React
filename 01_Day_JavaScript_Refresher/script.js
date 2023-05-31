@@ -1,4 +1,6 @@
 // Hello world basics
+import {countries} from './countries.js';
+import {web_techs} from './web_techs.js';
 
 let element = 'This is an external script in action';
 console.log(element);
@@ -318,3 +320,25 @@ const addingSugar = shoppingCart.push('Sugar');
 const honeyVar = shoppingCart.indexOf('Honey');
 const removeHoney = shoppingCart.splice(honeyVar,1);
 console.log(shoppingCart);
+
+//4. In countries array check if 'Ethiopia' exists in the array if it exists print 'ETHIOPIA'. If it does not exist add to the countries list.
+console.log(countries.indexOf('Ethiopia'));
+
+if(countries.indexOf('Ethiopia') === -1){
+    console.log('This array does not contain the country Ethiopia')
+}else {
+    console.log(`This country does contain Ethiopia, index number ${countries.indexOf('Ethiopia')}`)
+}
+//5.In the webTechs array check if Sass exists in the array and if it exists print 'Sass is a CSS preprocess'. If it does not exist add Sass to the array and print the array.
+if(web_techs.indexOf('Sass') === -1){
+    web_techs.push('Sass')
+    console.log(web_techs);
+}else {
+    console.log('Sass is a CSS preprocess');
+}
+//6. Concatenate the following two variables and store it in a fullStack variable.
+const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+const backEnd = ['Node', 'Express', 'MongoDB']
+
+const fullStack = frontEnd.concat(backEnd);
+console.log(fullStack);
