@@ -1,6 +1,6 @@
 // Hello world basics
-import {countries} from './countries.js';
-import {web_techs} from './web_techs.js';
+import { countries } from './countries.js';
+import { web_techs } from './web_techs.js';
 
 let element = 'This is an external script in action';
 console.log(element);
@@ -274,15 +274,15 @@ console.log(itCompanies.sort())
 //16. Reverse the array
 console.log(itCompanies.reverse());
 //17. Slice out the first 3 companies from the array
-    // console.log(itCompanies.splice(3,4));
+// console.log(itCompanies.splice(3,4));
 //18. Slice out the last 3 companies from the array
-    // const takeout = itCompanies.splice(-3,3);
-    // console.log(itCompanies);
+// const takeout = itCompanies.splice(-3,3);
+// console.log(itCompanies);
 //19.Slice out the middle IT company or companies from the array
-    // console.log(itCompanies[((itCompanies.length - 1) / 2)]);
+// console.log(itCompanies[((itCompanies.length - 1) / 2)]);
 //20.Remove the first IT company from the array
-    // const remove = itCompanies.shift();
-    // console.log(itCompanies);
+// const remove = itCompanies.shift();
+// console.log(itCompanies);
 //21.Remove the middle IT company or companies from the array
 itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'];
 console.log(itCompanies);
@@ -318,22 +318,22 @@ const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey']
 const addingMeat = shoppingCart.unshift('Meat');
 const addingSugar = shoppingCart.push('Sugar');
 const honeyVar = shoppingCart.indexOf('Honey');
-const removeHoney = shoppingCart.splice(honeyVar,1);
+const removeHoney = shoppingCart.splice(honeyVar, 1);
 console.log(shoppingCart);
 
 //4. In countries array check if 'Ethiopia' exists in the array if it exists print 'ETHIOPIA'. If it does not exist add to the countries list.
 console.log(countries.indexOf('Ethiopia'));
 
-if(countries.indexOf('Ethiopia') === -1){
+if (countries.indexOf('Ethiopia') === -1) {
     console.log('This array does not contain the country Ethiopia')
-}else {
+} else {
     console.log(`This country does contain Ethiopia, index number ${countries.indexOf('Ethiopia')}`)
 }
 //5.In the webTechs array check if Sass exists in the array and if it exists print 'Sass is a CSS preprocess'. If it does not exist add Sass to the array and print the array.
-if(web_techs.indexOf('Sass') === -1){
+if (web_techs.indexOf('Sass') === -1) {
     web_techs.push('Sass')
     console.log(web_techs);
-}else {
+} else {
     console.log('Sass is a CSS preprocess');
 }
 //6. Concatenate the following two variables and store it in a fullStack variable.
@@ -342,3 +342,38 @@ const backEnd = ['Node', 'Express', 'MongoDB']
 
 const fullStack = frontEnd.concat(backEnd);
 console.log(fullStack);
+
+//
+//Level 3
+//1. The following is an array of 10 students ages: js const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]  - Sort the array and find the min and max age - Find the median age(one middle item or two middle items divided by two) - Find the average age(all items divided by number of items) - Find the range of the ages(max minus min) - Compare the value of (min - average) and (max - average), use abs() method
+
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+ages.sort();
+console.log(ages);
+
+const long = ages.length;
+console.log(long);
+
+// 4, 5 index
+const median = (ages[4] + ages[5]) / 2
+console.log(`Median of the ages array is ${median}`);
+
+
+let sum = ages.reduce((accumulator, value) => {
+  return accumulator + value;
+}, 0);
+
+let average = sum / ages.length;
+console.log(average);
+
+const rangeFunc = (x, y) => {
+    return Math.abs(x - y);
+}
+console.log(ages[0]);
+
+const lastElement = ages.slice(-1);
+console.log(lastElement)
+
+console.log(rangeFunc(ages[0], lastElement));
+const sumCalc = 26 - 19;
+// console.log(sumCalc) Test to see if correct
