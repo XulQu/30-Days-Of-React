@@ -293,3 +293,28 @@ itCompanies.pop();
 console.log(itCompanies);
 //23. Remove all IT companies
 console.log(itCompanies.splice());
+
+// Exercise Level 2
+//1. Create a separate countries.js file and store the countries array into this file, create a separate file web_techs.js and store the webTechs array into this file. Access both file in main.js file
+//Complete.
+
+//2. First remove all the punctuations and change the string to array and count the number of words in the array
+let text = 'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.';
+text = text.replaceAll(",", " ");
+text = text.replaceAll(".", " ");
+
+console.log(text);
+const take = text.split(' ');
+console.log(take);
+//3. In the following shopping cart add, remove, edit items
+// add 'Meat' in the beginning of your shopping cart if it has not been already added
+// add Sugar at the end of you shopping cart if it has not been already added
+// remove 'Honey' if you are allergic to honey
+// modify Tea to 'Green Tea'
+
+const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey']
+const addingMeat = shoppingCart.unshift('Meat');
+const addingSugar = shoppingCart.push('Sugar');
+const honeyVar = shoppingCart.indexOf('Honey');
+const removeHoney = shoppingCart.splice(honeyVar,1);
+console.log(shoppingCart);
