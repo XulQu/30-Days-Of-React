@@ -377,3 +377,67 @@ console.log(lastElement)
 console.log(rangeFunc(ages[0], lastElement));
 const sumCalc = 26 - 19;
 // console.log(sumCalc) Test to see if correct
+
+//1.1 Slice the first ten countries from the countries array
+// countries.splice(0,10);
+console.log(countries);
+//1.2 Find the middle country(ies) in the countries array
+let middleCountry = countries[Math.round((countries.length) - 1) / 2];
+console.log(middleCountry);
+
+//1.3 Divide the countries array into two equal arrays if it is even. If countries array is not even , one more country for the first half.
+
+const halfCalc = countries.length / 2;
+
+const oddEven =() => {
+
+if(countries.length % 2 == 0){
+    return 'EVEN'
+}else  {
+    return 'ODD'
+
+}}
+
+oddEven();
+
+let arr01 = [];
+    let arr02 = [];
+
+const arrayAdd = () => {
+
+if(oddEven() === 'ODD'){
+    
+    for(let i = 0; i < halfCalc; i++){
+        
+        arr01.push(countries[i])
+    } console.log(arr01);
+    for(let i = 0; i < halfCalc -1; i++){
+        arr02.push(countries[i + 92]);
+        
+    }console.log(arr02);
+    
+}else {
+    for(let i = 0; i < halfCalc; i++){
+        
+        arr01.push(countries[i])
+    } console.log(arr01);
+    for(let i = 0; i < halfCalc; i++){
+        arr02.push(countries[i + halfCalc]);
+        
+    }console.log(arr02);
+
+}}
+
+arrayAdd();
+
+//test 
+
+console.log((arr01.length + arr02.length));
+
+if(((arr01.length + arr02.length) / countries.length) === 1 ){
+    console.log(`These two arrays contain all ${countries.length} countries`)
+}else {
+    console.log('These do not contain the right amount of countries')
+}
+
+// test complete
