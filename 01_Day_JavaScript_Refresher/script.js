@@ -542,17 +542,65 @@ if(a > b){
 b < a ? console.log(`${b} is less than ${a}`) : console.log(`${a} is less than ${b}`)
 
 //4. Even numbers are divisible by 2 and the remainder is zero. How do you check, if a number is even or not using JavaScript?
-const checker = prompt(`Enter Number between 1-100`);
+// const checker = prompt(`Enter Number between 1-100`);
 
-if(checker % 2 === 0){
-    console.log('Number is EVEN')
-}else {
-    console.log('Number is ODD')
-}
+// if(checker % 2 === 0){
+//     console.log('Number is EVEN')
+// }else {
+//     console.log('Number is ODD')
+// }
 
-//
+// //
 //Level 2 Conditional Questions
 //
 
+// 1. Write a code which can give grades to students according to theirs scores:
+// 80-100, A
+// 70-89, B
+// 60-69, C
+// 50-59, D
+// 0-49, F
+
+const gradeEnter = prompt(`Enter your results out of 100`)
+
+let grade = '';
+
+    // it is possible to place this in a function and return grade & set variable of grade to function, but too verbose
+if(gradeEnter <= 100 && gradeEnter >= 80){
+    grade = 'A';
+}else if(gradeEnter <= 89 && gradeEnter >= 70){
+    grade = 'B';
+}else if(gradeEnter <= 69 && gradeEnter >=60){
+    grade = 'C';
+}else if(gradeEnter <= 59 && gradeEnter >= 50){
+    grade = 'D';
+} else {
+    grade = 'F';
+}
+
+
+console.log(grade);
+
+switch (grade){
+    case 'A':
+    console.log(`You got an ${grade}`)
+    break
+
+    case 'B':
+    console.log(`You got an ${grade}`)
+    break
+
+    case 'C':
+    console.log(`You got an ${grade}`)
+    break
+
+    case 'D':
+    console.log(`You got an ${grade}`)
+    break
+
+    case 'F':
+    console.log(`You got an ${grade}`)
+    break
+}
 
 
