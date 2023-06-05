@@ -360,7 +360,7 @@ console.log(`Median of the ages array is ${median}`);
 
 
 let sum = ages.reduce((accumulator, value) => {
-  return accumulator + value;
+    return accumulator + value;
 }, 0);
 
 let average = sum / ages.length;
@@ -389,44 +389,46 @@ console.log(middleCountry);
 
 const halfCalc = countries.length / 2;
 
-const oddEven =() => {
+const oddEven = () => {
 
-if(countries.length % 2 == 0){
-    return 'EVEN'
-}else  {
-    return 'ODD'
+    if (countries.length % 2 == 0) {
+        return 'EVEN'
+    } else {
+        return 'ODD'
 
-}}
+    }
+}
 
 oddEven();
 
 let arr01 = [];
-    let arr02 = [];
+let arr02 = [];
 
 const arrayAdd = () => {
 
-if(oddEven() === 'ODD'){
-    
-    for(let i = 0; i < halfCalc; i++){
-        
-        arr01.push(countries[i])
-    } console.log(arr01);
-    for(let i = 0; i < halfCalc -1; i++){
-        arr02.push(countries[i + 92]);
-        
-    }console.log(arr02);
-    
-}else {
-    for(let i = 0; i < halfCalc; i++){
-        
-        arr01.push(countries[i])
-    } console.log(arr01);
-    for(let i = 0; i < halfCalc; i++){
-        arr02.push(countries[i + halfCalc]);
-        
-    }console.log(arr02);
+    if (oddEven() === 'ODD') {
 
-}}
+        for (let i = 0; i < halfCalc; i++) {
+
+            arr01.push(countries[i])
+        } console.log(arr01);
+        for (let i = 0; i < halfCalc - 1; i++) {
+            arr02.push(countries[i + 92]);
+
+        } console.log(arr02);
+
+    } else {
+        for (let i = 0; i < halfCalc; i++) {
+
+            arr01.push(countries[i])
+        } console.log(arr01);
+        for (let i = 0; i < halfCalc; i++) {
+            arr02.push(countries[i + halfCalc]);
+
+        } console.log(arr02);
+
+    }
+}
 
 arrayAdd();
 
@@ -434,10 +436,69 @@ arrayAdd();
 
 console.log((arr01.length + arr02.length));
 
-if(((arr01.length + arr02.length) / countries.length) === 1 ){
+if (((arr01.length + arr02.length) / countries.length) === 1) {
     console.log(`These two arrays contain all ${countries.length} countries`)
-}else {
+} else {
     console.log('These do not contain the right amount of countries')
 }
 
 // test complete
+
+//
+// Notes on Coditionals 
+//
+
+let num01 = -3;
+if (num01 > 0) {
+    console.log(`${num01} is a positive number`);
+} else {
+    console.log(`${num01} is a negative number`)
+}
+
+// it works with booleans values too
+
+let isRaining = true;
+if (isRaining) {
+    console.log(`It's raining out here`)
+} else {
+    console.log(`It ain't raining ladies and gentlemen`)
+}
+
+// if else
+
+let num02 = 0;
+if (num02 > 0) {
+    console.log(`${num02} is a positive number`)
+} else if (num02 < 0) {
+    console.log(`${num02} is a negative number`)
+} else if (num02 === 0) {
+    console.log(`${num02} is zero`);
+} else {
+    console.log(`${num02} is not a number`);
+}
+
+
+// Switch Cases
+
+let weather = 'sunny';
+
+switch (weather) {
+    case 'rainy':
+        console.log(`It's raining we are blessed`)
+        break
+    case 'sunny':
+        console.log(`It is sunny time for a beer`)
+        break
+    case 'snow':
+        console.log(`It's freezing out here`)
+        break
+    default:
+        console.log(`The overseer isn't happy no weather today`)
+}
+
+// Ternary Operators
+
+let isApocalypse = true;
+isApocalypse = false;
+
+isApocalypse ? console.log(`The Sun beckons me forth`) : console.log(`The Moon she seeks a new Hero to arise`)
