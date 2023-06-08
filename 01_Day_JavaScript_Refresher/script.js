@@ -603,4 +603,66 @@ switch (grade){
     break
 }
 
+const monthVar = prompt(`Enter Month`)
+const yearVar = prompt(`Enter Year`)
+
+let leapYear = '';
+
+if(yearVar % 4 === 0){
+    leapYear = true;
+}else {
+    leapYear = false;
+}
+
+if(leapYear === true && monthVar === 'February'){
+    console.log(`There are 29 days in the month of February because ${yearVar} it is a leap year`)
+}else if( yearVar === false && monthVar === 'February'){
+    console.log(`There are 28 days in the month of February because ${yearVar} it is not a leap year`)
+}
+
+switch (monthVar){
+    case 'January':
+    console.log(`There are 31 Days in January ${yearVar}`);
+    break
+
+    case 'March':
+    console.log(`There are 31 Days in March ${yearVar}`);
+    break
+
+    case 'April':
+    console.log(`There are 30 Days in April ${yearVar}`);
+    break
+
+    case 'May':
+    console.log(`There are 31 Days in May ${yearVar}`);
+    break
+
+    case 'June':
+    console.log(`There are 30 Days in June ${yearVar}`);
+    break
+
+    case 'July':
+    console.log(`There are 31 Days in July ${yearVar}`);
+    break
+
+    case 'August':
+    console.log(`There are 31 Days in August ${yearVar}`);
+    break
+
+    case 'September':
+    console.log(`There are 30 Days in September ${yearVar}`);
+    break
+
+    case 'October':
+    console.log(`There are 31 Days in October ${yearVar}`);
+    break
+
+    case 'November':
+    console.log(`There are 30 Days in November ${yearVar}`);
+    break
+
+    case 'December':
+    console.log(`There are 31 Days in December ${yearVar}`);
+    break
+}
 
