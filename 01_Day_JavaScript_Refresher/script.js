@@ -666,3 +666,48 @@ switch (monthVar){
     break
 }
 
+const names = ['Wamiq', 'Kyle', 'Mark' , 'Jono' , 'Tristan', 'Ian', 'Dylan'];
+
+for(name of names) {
+    console.log(name)
+    if(name === 'Jono'){
+    console.log(`Jono is in my list`);
+    break
+}}
+
+const numberArry = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
+
+// for(num of numberArry){
+//     if(num === 12){
+//         console.log(num)
+//         console.log(`List contains 12`);
+//         break
+//     }
+// }
+
+for(let i = 0; i < numberArry.length; i++){
+    console.log(numberArry[i])
+    if(numberArry[i] === 12){
+        console.log(`Number 12 was found`)
+        break;
+    }
+}
+
+// While loop
+
+let loading = 0;
+
+while(loading < 100){
+    console.log(`Website is still loading`)
+    loading++;
+}
+
+// Minus increment while loop
+
+let count = prompt(`Enter positive number`);
+
+while (count > 0){
+    console.log(count);
+    count--;
+}
+
